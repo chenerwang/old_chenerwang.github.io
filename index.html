@@ -352,7 +352,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  379
+                  387
                 </span>
               
 
@@ -390,23 +390,35 @@
 
       
         
-          <ul>
-<li>新建博文：<figure class="highlight plain"><figcaption><span>hexo new [layout] "博文名字"```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">即可在`myblog\source\_posts`找到 **博文名字.md**。</span><br><span class="line">layout为可选参数，默认为post，layout可在`myblog\scaffolds`目录下查看。你也可以添加自己的layout[布局],添加一个文件即可，同时也可以编辑现有的layout，如添加categories：</span><br></pre></td></tr></table></figure>
+          
+            <ul>
+<li>新建博文：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &quot;博文名字&quot;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<hr>
-<p>title: hexo+github建站<br>date: 1531286131000<br>categories: </p>
-<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 编辑博文</span><br><span class="line">编辑主要信息：</span><br></pre></td></tr></table></figure>
-<hr>
-<p>title: Hexo+Github建站       #文章页面上显示的名称，可随意修改，不会出现在URL中<br>date: 2017/8/14              #文章生成时间，一般不改，当然也可以任意修改<br>categories: Hexo建站         #文章分类目录，可以为空</p>
-<h2 id="tags-Hexo-文章标签，可空，多标签请用-tag1-tag2-tag3"><a href="#tags-Hexo-文章标签，可空，多标签请用-tag1-tag2-tag3" class="headerlink" title="tags: [Hexo]                 #文章标签，可空，多标签请用[tag1,tag2,tag3]"></a>tags: [Hexo]                 #文章标签，可空，多标签请用[tag1,tag2,tag3]</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">不想文章在主页全部显示，可以在需要截取的位置加上一下代码:</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/11/hexo+github建站/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<p>即可在<code>myblog\source\_posts</code>找到 <strong>博文名字.md</strong>。</p>
+<p>layout为可选参数，默认为post，layout可在<code>myblog\scaffolds</code>目录下查看。你也可以添加自己的layout[布局],添加一个文件即可，同时也可以编辑现有的layout，如添加categories：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">categories: </span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<ul>
+<li>编辑博文</li>
+</ul>
+<p>编辑主要信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo+Github建站       #文章页面上显示的名称，可随意修改，不会出现在URL中</span><br><span class="line">date: 2017/8/14              #文章生成时间，一般不改，当然也可以任意修改</span><br><span class="line">categories: Hexo建站         #文章分类目录，可以为空</span><br><span class="line">tags: [Hexo]                 #文章标签，可空，多标签请用[tag1,tag2,tag3]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>不想文章在主页全部显示，可以在需要截取的位置加上一下代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>
+<p>插入图片：</p>
+<ol>
+<li>本地路径：<br>在myblog/source目录下新建一个img文件夹，将图片放入该文件夹中，插入图片路径即可；</li>
+<li>使用七牛云引用外部链接</li>
+</ol>
+<ul>
+<li>常用hexo命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hexo n “我的博文”  #新建文章</span><br><span class="line">hexo generate 也可简写成 hexo g #生成</span><br><span class="line">hexo server 也可简写成 hexo s #启动服务预览（监视文件变动并自动更新，无需重启服务器）</span><br><span class="line">hexo deploy 也可简写成 hexo d #部署</span><br><span class="line">hexo server -s #静态模式</span><br><span class="line">hexo server -p 5000 #修改端口</span><br><span class="line">hexo server -i 192.168.1.1 #自定义IP</span><br><span class="line">hexo clean #清楚缓存</span><br></pre></td></tr></table></figure>
+<ul>
+<li>参考链接：<br><a href="https://juejin.im/post/5b3ed1d4e51d45194e0b7884" target="_blank" rel="noopener">https://juejin.im/post/5b3ed1d4e51d45194e0b7884</a></li>
+</ul>
+
+          
         
       
     </div>
@@ -830,6 +842,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
