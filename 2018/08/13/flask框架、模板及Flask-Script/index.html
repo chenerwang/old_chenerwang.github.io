@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="chenerwang&#39;s blog">
 <meta property="og:description" content="flask相关介绍">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-13T07:59:20.355Z">
+<meta property="og:updated_time" content="2018-08-13T08:00:16.298Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="flask框架、模板及Flask-Script">
 <meta name="twitter:description" content="flask相关介绍">
@@ -351,7 +351,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  123
+                  216
                 </span>
               
 
@@ -397,6 +397,24 @@
 <li>Ctrl+Alt+B：跳转到实现</li>
 <li><a href="http://python.jobbole.com/85056/" target="_blank" rel="noopener">装饰器</a>：外部函数是装饰器的名字，返回一个装饰版的函数；内部函数是装饰器要实现的功能</li>
 </ol>
+</li>
+</ul>
+<ul>
+<li><p><strong>路径映射</strong></p>
+<p>  多映射：</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route('/index/')</span></span><br><span class="line"><span class="meta">@app.route('/')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'hello'</span></span><br></pre></td></tr></table></figure>
+<p>  参数变量：&lt; &gt;</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route('/profile/&lt;int:uid&gt;/')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">profile</span><span class="params">(uid)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'profile:'</span> + str(uid)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>HTTP Method</strong></p>
+<ul>
+<li>GET：获取接口信息</li>
+<li>POST：提交数据到服务器</li>
+<li>HEAD：紧急查看接口HTTP的头</li>
+<li>PUT：支持<a href="http://www.cnblogs.com/weidagang2046/archive/2011/06/04/2063696.html" target="_blank" rel="noopener">幂等性</a>的POST</li>
+<li>DELETE：删除服务器上的资源</li>
+<li>OPTIONS：查看支持的方法</li>
+</ul>
 </li>
 </ul>
 
