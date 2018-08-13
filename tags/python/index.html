@@ -98,7 +98,7 @@
 <meta name="description" content="good good study, day day up.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="chenerwang&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/tags/python/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/Python/index.html">
 <meta property="og:site_name" content="chenerwang&#39;s blog">
 <meta property="og:description" content="good good study, day day up.">
 <meta property="og:locale" content="zh-Hans">
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/python/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/Python/"/>
 
 
 
 
 
-  <title>标签: python | chenerwang's blog</title>
+  <title>标签: Python | chenerwang's blog</title>
   
 
 
@@ -270,7 +270,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>python<small>标签</small>
+        <h1>Python<small>标签</small>
         </h1>
       </div>
 
@@ -282,9 +282,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/07/12/1_number/" itemprop="url">
+            <a class="post-title-link" href="/2018/07/13/2-解释器，注释，运算符/" itemprop="url">
               
-                <span itemprop="name">1_number</span>
+                <span itemprop="name">2-解释器，注释，运算符</span>
               
             </a>
         
@@ -292,9 +292,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-12T19:17:20+08:00"
-              content="2018-07-12" >
-          07-12
+              datetime="2018-07-13T11:34:23+08:00"
+              content="2018-07-13" >
+          07-13
         </time>
       </div>
 
@@ -694,7 +694,29 @@
 
 </body>
 </html>
->
+rs-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
 
 
 
